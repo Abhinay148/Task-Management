@@ -23,6 +23,7 @@ const Signup = () => {
       console.log(authToken);
       setAlertMessage("Signup Success: Please SignIn to continue");
       // Redirect to the login page or perform any other necessary action here.
+      window.location.reload();
     } else if (response.status === 409) { // Check for a 409 Conflict status code for email already existing
       setAlertMessage("Email already exists. Please use a different email.");
     } else if (response.status === 400) { // Check for a 400 Bad Request status code for invalid email
