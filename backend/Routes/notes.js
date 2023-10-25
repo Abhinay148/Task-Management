@@ -27,13 +27,11 @@ router.post('/addnotes', authuser, async (req, res) => {
 });
 
 
-//Route 4: get user note by user
-router.get('/fetchusernotes', authuser, async (req, res) => {
-    const notes = await Notes.find({ user: req.user.id })
+router.get('/fetchusernotes/:id', authuser, async (req, res) => {
+    const notes = await Notes.find({ user: req.params.id })
     res.json(notes)
 })
 
-//Route 5: update note by admin
 router.put('/updatenote/:noteid', fetchuser, async (req, res) => {
     try {
         // Implement code to update the task using req.params.noteid
