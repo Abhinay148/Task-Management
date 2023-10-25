@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './../App.css';
 import 'font-awesome/css/font-awesome.min.css';
+import { useParams } from 'react-router-dom';
 
 const formatDateString = (dateString) => {
     const dateObject = new Date(dateString);
@@ -11,6 +12,7 @@ const formatDateString = (dateString) => {
 };
 
 const User = () => {
+    const { userId } = useParams();
     const [showTaskForm, setShowTaskForm] = useState(false);
     const [tasks, setTasks] = useState([]);
     const [Token] = useState(localStorage.getItem("authToken"));
@@ -36,7 +38,7 @@ const User = () => {
 
     const fetchUserNotes = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/notes/fetchusernotes", {
+            const response = await fetch(`http://localhost:5000/api/notes/fetchusernotes/${userId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
