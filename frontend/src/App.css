@@ -1,0 +1,150 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #121212;
+    padding: 10px; 
+  }
+  
+  .header-logo {
+    font-size: 20px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-button {
+    display: flex;
+    margin-right: 20px; 
+    align-items: center; 
+  }
+  
+  .header-button button {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+  }
+  
+  .hello {
+    background-image: url('task-list-template.jpg');
+    background-size: cover;
+    height: 85vh; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  .hello h1, .hello h2 {
+    font-size: 100px;
+    font-weight:800;
+    letter-spacing: 4px; 
+    color: rgb(5, 77, 83); 
+  }
+
+  .signup-container {
+    background-color: #100f0f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    margin: 20px;
+  }
+  .signup-container h3{
+    text-align:center;
+    color:white;
+  }
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin: 10px 0;
+  }
+  
+  label {
+    color: white;
+    font-weight: bold;
+  }
+  
+  input {
+    width:300px;
+    margin-left: 30px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .signup-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+  }
+  
+  .signup-button:hover {
+    background-color: #0056b3;
+  }
+  .align-right {
+    display: flex;
+    justify-content: center;
+  }
+
+.user {
+  text-align: center;
+  padding: 20px;
+}
+
+.admin{
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+h2 {
+  font-size: 18px;
+  color: #666;
+}
+
+button {
+  background-color: #007bff;
+  margin: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: #0f1010;
+  color: #fff;
+  padding: 10px;
+}
+td{
+  margin:10px;
+}
+.add-task{
+  width: 300px;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.add-task input{
+  width: 250px;
+  margin:5px;
+}
