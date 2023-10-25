@@ -74,6 +74,7 @@ const User = () => {
                 // Remove the deleted task from the state
                 setTasks(tasks.filter((task) => task._id !== taskId));
                 setAlertMessage('Task deleted successfully!');
+                window.location.reload();
             } else {
                 console.error('Failed to delete task');
                 setAlertMessage('An error occurred while deleting the task.');
@@ -109,6 +110,7 @@ const User = () => {
                     body: JSON.stringify(formData),
                 });
                 setAlertMessage('Task updated successfully!');
+                window.location.reload();
             } else {
                 response = await fetch("http://localhost:5000/api/notes/addnotes", {
                     method: 'POST',
@@ -119,6 +121,7 @@ const User = () => {
                     body: JSON.stringify(formData),
                 });
                 setAlertMessage('Task added successfully!');
+                window.location.reload();
             }
 
             const json = await response.json();
