@@ -28,7 +28,14 @@ router.post('/addnotes', authuser, async (req, res) => {
 
 
 router.get('/fetchusernotes/:id', authuser, async (req, res) => {
-    const notes = await Notes.find({ user: req.params.id })
+    var notes;
+    if (req.params.userId=='userId'){
+        notes = await Notes.find({ user: req.user.id })
+    }
+    else{
+        notes = await Notes.find({ user: req.params.id })
+    }
+    
     res.json(notes)
 })
 
