@@ -27,7 +27,7 @@ const Signin = () => {
         if (result.user.access === "admin") {
           navigate('/admin');
         } else if (result.user.access === "user") {
-          navigate('/user');
+          navigate('/user/userId');
         }
       } else {
         setAlertMessage("Wrong credentials. Please try again.");
